@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<script src="../js/ajax.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 400px;
+				height: 400px;
+				background: #CCCCCC;
+				border: 1pxx solid #999;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var aBtn=document.getElementsByTagName('input');
+				var aDiv=document.getElementById('div1');
+				aBtn.onclick=function(){
+					ajax('abc',function(str){
+						alert(str);
+					});
+				}
+			}
+		</script>
+	</head>
+	<body>
+	<input type="button" value="按钮1" />
+	<input type="button" value="按钮2" />
+	<input type="button" value="按钮3" />
+	<div id="div1">
+		
+	</div>
+	</body>
+</html>

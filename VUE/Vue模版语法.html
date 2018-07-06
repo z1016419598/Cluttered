@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div v-text="name +' lee'"></div>
+			<div v-html="name +' lee'"></div>
+			<!--
+            	第一种语法插值表达式
+            -->
+			<div>{{name+' lee'}}</div>
+		</div>
+	</body>
+	<script>
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					name:"dell"
+				}
+			})
+		</script>
+</html>

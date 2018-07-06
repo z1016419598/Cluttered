@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#img1{
+				filter:alpha(opacity:30);
+				opacity: 0.3;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<img id="img1" src="img/HBuilder.png" />
+	</body>
+	<script>
+			var timer=null;
+			var alpha=30;
+			var oImg=document.getElementById('img1');
+		window.onload=function(){
+			oImg.onmouseover=function(){
+				startMove(100);
+			}
+			oImg.onmouseout=function(){
+				startMove(30);
+			}
+		}
+			function startMove(iTarget){
+				clearInterval(timer);
+				timer=setInterval(function(){
+					var iSpeed=0;
+					if(alpha<iTarget){
+						iSpeed=10;
+					}
+					else{
+						iSpeed=-10;
+					}
+					if(alpha==iTarget){
+						clearInterval(timer);
+					}
+					else{
+						alpha+=iSpeed;
+						oImg.style.filter="alpha(opacity:'+alpha+')";
+						oImg.style.opacity=alpha/100;
+						document.title=alpha;
+					}
+				},30)
+			}
+		</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		window.onload=function(){
+			//获取元素
+			var oTxt=document.getElementById('text1');
+			var oBtn=document.getElementById('btn1');
+			//为元素添加点击事件
+			oBtn.onclick=function(){
+				var oNewWin=window.open('about:blank');
+				oNewWin.document.write(oTxt.value);
+			}
+		}
+	</script>
+	<body>
+	<textarea id="text1" rows="10" cols="40"></textarea><br />
+	<input id="btn1" type="button" value="运行" />
+	</body>
+</html>

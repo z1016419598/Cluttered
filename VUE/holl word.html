@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HELLP WORD</title>
+		<script src="./vue.js"></script>
+	</head>
+	<body>
+		<div id="app">{{content}}</div>
+	</body>
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					content:'holl word1'
+				}
+			})
+			setTimeout(function(){
+				app.$data.content = 'by word'
+			},2000)
+		</script>
+</html>

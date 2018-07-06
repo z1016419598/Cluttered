@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		//"document"最顶层虚拟的父节点
+		document.onclick=function(ev){
+			//鼠标当前的X坐标Y坐标不兼容火狐
+		//	alert(event.clientX+','+event.clientY)；
+		//兼容火狐
+		//alert(ev.clientX+','+ev.clientY)；
+		//兼容的写法
+//		if(ev){
+//			alert(ev.clientX+','+ev.clientY)；
+//		}
+//		else{
+//			alert(event.clientX+','+event.clientY)；
+//		}
+
+		//第二种兼容写法
+		var oEvent= ev||event;
+		alert(oEvent.clientX+','+oEvent.clientY);
+		}
+	</script>
+	<body>
+
+	</body>
+</html>

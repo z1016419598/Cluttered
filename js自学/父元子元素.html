@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="oUl">
+			<li>111</li>
+			<li>222</li>
+			<li>333</li>
+			<li>444<a href="javascript:;">隐藏</a></li>
+		</ul>
+	</body>
+	<script>
+	var oUl=document.getElementById("oUl");
+	var aA=document.getElementsByTagName("a")
+	var i;
+	//  children子节点兼容IE火狐
+	for(i=0;i<oUl.children.length;i++){
+		oUl.children[i].style.background='red';
+	}
+	//隐藏父级元素节点parentNode火狐IE都兼容
+	for(i=0;i<aA.length;i++){
+		aA[i].onclick=function(){
+			this.parentNode.style.display="none"
+		}
+	}
+	</script>
+</html>

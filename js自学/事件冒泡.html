@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		document.onclick=function(){
+			
+		}
+	</script>
+	<!--
+    	描述：当点击事件结束后会把事件传递给父级
+    -->
+	<body onclick="alert('body')">
+		<div style="width: 300px; height: 300px; background: red; " onclick="alert(this.style.background);">
+			<div style="width: 200px; height: 200px; background: green; " onclick="alert(this.style.background);">
+			<div style="width: 100px; height: 100px; background: #CCCCCC; " onclick="alert(this.style.background);">
+			
+		</div>
+		</div>
+		</div>
+	</body>
+</html>
